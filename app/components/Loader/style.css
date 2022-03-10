@@ -1,0 +1,64 @@
+.loader {
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.loader__triforce-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loader__triforce,
+.loader__triforce::before,
+.loader__triforce::after {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #ceb502;
+  position: relative;
+  -webkit-animation: 3s triforce linear infinite 2s both;
+  animation: 3s triforce linear infinite 2s both;
+  top: 50px;
+}
+
+.loader__triforce::before,
+.loader__triforce::after {
+  content: "";
+  position: absolute;
+}
+
+.loader__triforce::before {
+  left: 25px;
+  top: 0;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.loader__triforce::after {
+  top: -50px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+@keyframes triforce {
+  0% {
+    border-bottom-color: rgb(206, 181, 2);
+  }
+  40% {
+    border-bottom-color: rgba(206, 181, 2, 0);
+  }
+  80% {
+    border-bottom-color: rgb(206, 181, 2);
+  }
+  100% {
+    border-bottom-color: rgb(206, 181, 2);
+  }
+}

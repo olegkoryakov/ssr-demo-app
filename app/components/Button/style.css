@@ -1,0 +1,60 @@
+.button {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  position: relative;
+}
+
+.button--add {
+  background-color: rgb(91, 199, 82);
+  transition: background-color 0.3s ease;
+  border: 3px solid rgb(54, 122, 45)
+}
+
+.button--add:before,
+.button--add:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+}
+
+.button--add:before {
+  width: 2px;
+  height: 8px;
+}
+
+.button--add:after {
+  width: 8px;
+  height: 2px;
+}
+
+.button--add:hover {
+  background-color: rgb(66, 158, 74);
+}
+
+
+.button--remove {
+  background-color: rgb(212, 81, 81);
+  transition: background-color 0.3s ease;
+  border: 3px solid rgb(122, 45, 45)
+}
+
+.button--remove:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.button--remove:hover {
+  background-color: rgb(173, 65, 65);
+}
